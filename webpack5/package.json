@@ -1,0 +1,19 @@
+{
+  "name": "webpack5",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production"
+  },
+  "devDependencies": {
+    "css-loader": "^4.2.2",
+    "file-loader": "^6.0.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^5.0.0-beta.28"
+  },
+  "dependencies": {
+    "webpack-cli": "^4.0.0-beta.8"
+  }
+}
