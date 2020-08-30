@@ -1,11 +1,6 @@
-const test = "🐻hello word!"
+// import('./async1.js').then((_) => {
+//     console.log(_.default);
+// });
 
-import('./async1.js').then((_) => {
-    cosnole.log(_.defualt);
-})
-
-import('./async2.js').then((_) => {
-    cosnole.log(_.defualt);
-})
-
-
+const a = require('./require.js');
+console.log(a);
