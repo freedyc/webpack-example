@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://webpack5/./src/index.js"],"names":["console","log"],"mappings":"AAKAA,QAAQC,IALK","file":"main.js","sourcesContent":["const test = '测试🐶';\nconst test1 = '不用的数据';\nfunction test2() {\n    console.log(\"此函数也不会调用\")\n}\nconsole.log(test);  "],"sourceRoot":""}

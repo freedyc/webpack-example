@@ -20,7 +20,6 @@ module.exports = {
         cacheDirectory: path.resolve(__dirname, '.tem_cache')
     },
     optimization: {
-        moduleIds: 'deterministic'
         // splitChunks:{
         //     cacheGroups: {
         //     },
