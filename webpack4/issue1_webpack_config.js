@@ -1,9 +1,7 @@
 
 const path =require('path');
-console.log(path.resolve(__dirname + '/node_modules/lodash'),
-path.resolve(__dirname + '/src'))
-
 module.exports = {
+    entry: path.join(__dirname, '/src/loader-include-exclude/index.js'),
     module: {
         rules: [
             {
@@ -15,11 +13,17 @@ module.exports = {
                         plugins: ['@babel/plugin-transform-runtime']
                     }
                 },
+                // 组合1
                 // exclude: /node_modules/,  // 如果设置则include 是不生效的
-                include: [
-                    path.resolve(__dirname + '/node_modules/lodash'), // 如果仅设置此项，则不会打包src文件夹下的js文件
-                    path.resolve(__dirname + '/src'), // 如果仅设置了此项，则不会打包node_modules下的文件
-                ]
+                // include: [
+                //     path.resolve(__dirname + '/node_modules/lodash'), // 如果仅设置此项，则不会打包src文件夹下的js文件
+                //     path.resolve(__dirname + '/src'), // 如果仅设置了此项，则不会打包node_modules下的文件
+                // ]
+                // 组合2,以下配置会导致 src，lodash，而node_module其他目录可以， 不使用此loader处理
+                include: /node_modules/,
+                exclude: [
+                    path.resolve(__dirname + '/node_modules/lodash')
+                ],
             }
         ]
     }

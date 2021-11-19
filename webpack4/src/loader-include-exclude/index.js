@@ -1,10 +1,10 @@
  
-// import $ from 'jquery';
+import $ from 'jquery';
 const { add } = require('lodash');
 
 console.log(add(1,2));
 
-// console.log($)
+console.log($)
 
 class BBBBB {
     constructor() {
